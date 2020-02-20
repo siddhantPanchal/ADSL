@@ -38,6 +38,7 @@ private:
 		{
 			p[key] = temp->getNext();
 			free(temp);
+			isFound = true;
 		}
 		else
 		{
@@ -107,6 +108,28 @@ public:
 
 		delet(key, value);
 
+	}
+
+	void search() {
+		int value = 0, key = 0;
+		cout << "\nEnter value : ";
+		cin >> value;
+		key = value % 10;
+		if (p[key] == NULL) {
+			cout << "\nNot Found ";
+		}
+		else if(p[key]->getValue() == value) {
+			cout << "Value found at : " << key;
+		}
+		else {
+			Pair* temp = p[key];
+			while (temp != NULL) {
+				if (temp->getValue() == value)
+					cout << "Value found at : " << key;
+				temp = temp->getNext();
+			}
+		}
+		
 	}
 
 
