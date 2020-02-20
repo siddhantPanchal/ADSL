@@ -8,7 +8,7 @@ int main()
 	int ch = 0;
 	do
 	{
-		cout << "\n1.insert new value \n2.display \n3.delete \n10.exit \nEnter your choice : ";
+		cout << "\n1.insert new value \n2.display \n3.delete \n4.search \n10.exit \nEnter your choice : ";
 		cin >> ch;
 		switch (ch)
 		{
@@ -17,6 +17,8 @@ int main()
 		case 2:d.display();
 			break;
 		case 3:d.delet();
+			break;
+		case 4:d.search();
 			break;
 		case 10:
 			exit(0);
